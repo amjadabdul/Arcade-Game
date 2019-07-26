@@ -28,7 +28,9 @@ Enemy.prototype.update = function (dt) {
     }
 
     // Check for collision between player and enemies
-    if (getDistance(player.x) < this.x + 60 && getDistance(player.x) + 37 > this.x && getDistance(player.y) < this.y + 25 && 30 + getDistance(player.y) > this.y) {
+    // if (getDistance(player.x) < this.x + 60 && getDistance(player.x) + 37 > this.x && getDistance(player.y) < this.y + 25 && 30 + getDistance(player.y) > this.y) {
+
+    if (player.x < this.x + 60 && player.x+ 37 > this.x && player.y < this.y + 25 && 30 + player.y > this.y) {
         player.x = 200;
         player.y = 380;
         score = 0;
